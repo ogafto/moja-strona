@@ -70,7 +70,7 @@ export default function Hero() {
           >
             <motion.span className="block" variants={fadeUp}>
               Zmieniamy nudne{" "}
-              <span className="inline-block text-[#009DFF] min-h-[100px] md:min-h-0">
+              <span className="inline-block text-[#009DFF]">
                 <ReactTyped
                   strings={[
                     "grafiki",
