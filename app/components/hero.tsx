@@ -45,8 +45,16 @@ export default function Hero() {
     >
       <motion.div
         initial={{ opacity: 0, y: -40 }}
-        animate={{ opacity: 0.7, y: 0 }}
-        transition={{ duration: 1.4, ease: easePremium }}
+        animate={{ opacity: 0.7, y: [-20, 20] }}
+        transition={{
+          opacity: { duration: 1.4, ease: easePremium },
+          y: {
+            repeat: Infinity,
+            repeatType: "reverse",
+            duration: 10,
+            ease: "easeInOut",
+          },
+        }}
         className="absolute inset-0 bg-no-repeat"
         style={{
           backgroundImage: "url('/pattern-overlay.png')",
@@ -68,8 +76,7 @@ export default function Hero() {
             className="text-[40px] md:text-[64px] font-semibold leading-tight tracking-tight text-white"
             variants={fadeUp}
           >
-            <motion.span className="block" variants={fadeUp}>Zmieniamy nudne</motion.span>
-            <motion.span className="block text-[#009DFF]" variants={fadeUp}>
+            <span className="block md:inline">Zmieniamy nudne </span><motion.span className="text-[#009DFF] md:inline" variants={fadeUp}>
               <ReactTyped
                 strings={[
                   "grafiki",
