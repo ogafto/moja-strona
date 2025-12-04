@@ -40,7 +40,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative h-screen w-full bg-top bg-no-repeat overflow-hidden mb-[-100px]"
+      className="relative h-screen w-full overflow-hidden bg-top bg-no-repeat md:mb-[-100px]"
       style={{ backgroundImage: "url('/pattern.png')" }}
     >
       <motion.div

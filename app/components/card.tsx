@@ -33,7 +33,6 @@ const Card = () => {
       whileInView="visible"
       id="portfolio"
       viewport={{ once: false, amount: 0.2 }}
-      style={{ marginTop: "0x" }}
       className="
         w-full 
         max-w-[1320px] 
