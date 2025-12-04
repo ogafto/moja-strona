@@ -68,27 +68,28 @@ export default function Hero() {
             className="text-[40px] md:text-[64px] font-semibold leading-tight tracking-tight text-white"
             variants={fadeUp}
           >
-            <motion.span className="block" variants={fadeUp}>
-              Zmieniamy nudne{" "}
-              <span className="inline-block text-[#009DFF]">
-                <ReactTyped
-                  strings={[
-                    "grafiki",
-                    "strony internetowe",
-                    "projekty UI/UX",
-                    "aplikacje mobilne",
-                  ]}
-                  typeSpeed={100}
-                  backSpeed={100}
-                  backDelay={1200}
-                  loop
-                />
-              </span>
+            <motion.span className="block" variants={fadeUp}>Zmieniamy nudne</motion.span>
+            <motion.span className="block text-[#009DFF]" variants={fadeUp}>
+              <ReactTyped
+                strings={[
+                  "grafiki",
+                  "strony internetowe",
+                  "projekty UI/UX",
+                  "aplikacje mobilne",
+                ]}
+                typeSpeed={100}
+                backSpeed={100}
+                backDelay={1200}
+                loop
+              />
             </motion.span>
 
-            <motion.span className="block" variants={fadeUp}>
-              w nowoczesne i stylowe rozwiązania.
-            </motion.span>
+            <motion.div variants={fadeUp}>
+              <span className="block md:inline">w nowoczesne i </span>
+              <span className="block md:inline">
+                stylowe rozwiązania.
+              </span>
+            </motion.div>
           </motion.h1>
 
           <motion.p
