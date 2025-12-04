@@ -40,7 +40,7 @@ export default function Hero() {
 
   return (
     <section
-      className="relative h-screen w-full overflow-hidden bg-top bg-no-repeat md:mb-[-100px]"
+      className="relative min-h-screen w-full overflow-hidden bg-top bg-no-repeat md:mb-[-100px]"
       style={{ backgroundImage: "url('/pattern.png')" }}
     >
       <motion.div
@@ -54,7 +54,7 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative flex w-full flex-col items-center px-4 pt-[230px] text-center">
+      <div className="relative flex w-full flex-col items-center px-4 pt-[140px] text-center md:pt-[230px]">
         <motion.div
           initial="hidden"
           animate="visible"
