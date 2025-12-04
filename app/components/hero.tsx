@@ -100,7 +100,7 @@ export default function Hero() {
           </motion.p>
 
           <motion.div
-            className="mt-12 flex items-center justify-center gap-5"
+            className="mt-12 flex flex-col items-center justify-center gap-5 md:flex-row"
             variants={{
               visible: {
                 transition: { staggerChildren: 0.15, delayChildren: 0.2 },
@@ -110,7 +110,7 @@ export default function Hero() {
             <motion.a
               variants={fadeUp}
               href="#portfolio"
-              className="group relative block overflow-hidden rounded-lg bg-[#009DFF] px-8 py-4 text-base font-medium text-white shadow-md transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl"
+              className="group relative block w-full overflow-hidden rounded-lg bg-[#009DFF] px-8 py-4 text-base font-medium text-white shadow-md transition-all duration-300 ease-out hover:scale-105 hover:shadow-xl md:w-auto"
             >
               <span className="flex items-center justify-center gap-2 transition-transform duration-300 group-hover:-translate-y-[150%]">
                 Nasze Portfolio
@@ -124,8 +124,8 @@ export default function Hero() {
 
             <motion.a
               variants={fadeUp}
-              href="#"
-              className="group relative block overflow-hidden rounded-lg border border-white bg-transparent px-8 py-4 text-base font-medium text-white transition-all duration-300 ease-out hover:bg-white hover:text-black"
+              href="https://discord.gg/6VFAEr2qmD"
+              className="group relative block w-full overflow-hidden rounded-lg border border-white bg-transparent px-8 py-4 text-base font-medium text-white transition-all duration-300 ease-out hover:bg-white hover:text-black md:w-auto"
             >
               <span className="flex items-center justify-center gap-2 transition-transform duration-300 group-hover:-translate-y-[150%]">
                 <FaDiscord />

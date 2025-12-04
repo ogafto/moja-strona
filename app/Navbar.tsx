@@ -59,7 +59,7 @@ const Navbar = () => {
         <div className="flex items-center gap-4">
           <a
             href="https://discord.gg/E434234"
-            className="group flex-shrink-0 rounded-lg bg-[#009DFF] text-base font-medium text-white shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+            className="group hidden flex-shrink-0 rounded-lg bg-[#009DFF] text-base font-medium text-white shadow-md transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl md:block"
           >
             <span className="relative block h-full w-full overflow-hidden px-8 py-2">
               <span className="flex items-center justify-center gap-2 text-center transition-transform duration-300 group-hover:-translate-y-[120%]">
@@ -113,6 +113,13 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Portfolio
+            </Link>
+            <Link
+              href="https://discord.gg/E434234"
+              className="flex items-center justify-center gap-2 rounded-lg bg-[#009DFF] px-8 py-3 text-xl font-medium text-white shadow-md"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <FaDiscord /> Discord
             </Link>
           </div>
         </motion.div>
