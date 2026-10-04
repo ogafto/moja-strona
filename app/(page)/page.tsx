@@ -16,8 +16,8 @@ export default async function Home() {
       <Navbar siteName={c.settings.site_name} links={c.nav_links} ctaLabel={c.navbar.cta_label} ctaUrl={c.navbar.cta_url} />
       <main>
         <Hero hero={c.hero} stats={c.hero_stats} />
-        {!c.services_section.hidden && <Services section={c.services_section} services={c.services} contactUrl={c.navbar.cta_url} />}
-        {!c.faq_section.hidden && <Faq section={c.faq_section} items={c.faq} contactUrl={`mailto:${c.settings.email}`} contactLabel={c.settings.email} />}
+        {!c.services_section.hidden && c.services.length > 0 && <Services section={c.services_section} services={c.services} contactUrl={c.navbar.cta_url} />}
+        {!c.faq_section.hidden && c.faq.length > 0 && <Faq section={c.faq_section} items={c.faq} contactUrl={`mailto:${c.settings.email}`} contactLabel={c.settings.email} />}
       </main>
       <Footer footer={c.footer} email={c.settings.email} siteName={c.settings.site_name} socials={c.social_links} />
     </div>

@@ -1,159 +1,30 @@
+import defaults from "@/cms/defaults.json";
+import { normalizeContent } from "./normalize";
 import type { SiteContent } from "./types";
 
-// Treści awaryjne — pokazywane, gdy CMS nie odpowiada albo pole jest puste.
-export const fallbackContent: SiteContent = {
-  settings: {
-    site_name: "programista.dev",
-    accent_color: "#B6FF3B",
-    email: "kontakt@programista.dev",
-  },
-  seo: {
-    title: "Programista — strony, aplikacje i automatyzacje na zamówienie",
-    description:
-      "Projektuję i programuję szybkie strony, aplikacje webowe, sklepy i integracje. Next.js, React, Node.js. Od pomysłu do wdrożenia.",
-    og_image: "",
-  },
-  navbar: {
-    cta_label: "Napisz do mnie",
-    cta_url: "#kontakt",
-  },
-  nav_links: [
-    { id: "uslugi", label: "Usługi", href: "#uslugi" },
-    { id: "faq", label: "FAQ", href: "#faq" },
-    { id: "kontakt", label: "Kontakt", href: "#kontakt" },
-  ],
+const header = { hidden: false, eyebrow: "", title: "", subtitle: "" };
+
+const EMPTY: SiteContent = {
+  settings: { site_name: "", accent_color: "#B6FF3B", email: "" },
+  seo: { title: "", description: "", og_image: "" },
+  navbar: { cta_label: "", cta_url: "" },
+  nav_links: [],
   hero: {
-    badge: "Dostępny na nowe projekty",
-    available: true,
-    title_lead: "Piszę kod, który",
-    rotating_words: ["sprzedaje.", "skaluje się.", "nie śpi.", "po prostu działa."],
-    subtitle:
-      "Strony, aplikacje webowe i automatyzacje, które są szybkie, bezpieczne i łatwe w utrzymaniu. Zajmuję się wszystkim — od makiety po wdrożenie na produkcję.",
-    primary_cta_label: "Zobacz, co robię",
-    primary_cta_url: "#uslugi",
-    secondary_cta_label: "Wyceń projekt",
-    secondary_cta_url: "#kontakt",
-    name: "Jan Kowalski",
-    role: "Full-stack developer",
-    location: "Polska · zdalnie",
-    stack: ["Next.js", "React", "TypeScript", "Node.js", "PostgreSQL", "Docker"],
-    avatar: "",
+    badge: "", available: false, title_lead: "", rotating_words: [], subtitle: "",
+    primary_cta_label: "", primary_cta_url: "", secondary_cta_label: "", secondary_cta_url: "",
+    name: "", role: "", location: "", stack: [], avatar: "",
   },
-  hero_stats: [
-    { id: "s1", value: "8+", label: "lat doświadczenia" },
-    { id: "s2", value: "120+", label: "wdrożonych projektów" },
-    { id: "s3", value: "99.9%", label: "uptime aplikacji" },
-    { id: "s4", value: "<24h", label: "czas odpowiedzi" },
-  ],
-  services_section: {
-    hidden: false,
-    eyebrow: "01 — usługi",
-    title: "Co wykonuję",
-    subtitle:
-      "Biorę projekt od A do Z albo dołączam do Twojego zespołu tam, gdzie brakuje rąk. Każda usługa kończy się działającym kodem na produkcji.",
-  },
-  services: [
-    {
-      id: "web",
-      title: "Strony internetowe",
-      description: "Szybkie, responsywne strony firmowe i landing page z CMS-em, które ładują się w ułamku sekundy i dobrze wypadają w Google.",
-      file_name: "landing.tsx",
-      icon: "globe",
-      tags: ["Next.js", "SEO", "CMS"],
-      price_from: 2500,
-    },
-    {
-      id: "apps",
-      title: "Aplikacje webowe",
-      description: "Panele, systemy SaaS i narzędzia wewnętrzne — z logowaniem, rolami, płatnościami i wszystkim, czego potrzebuje Twój biznes.",
-      file_name: "app.tsx",
-      icon: "layout",
-      tags: ["React", "TypeScript", "Auth"],
-      price_from: 9000,
-    },
-    {
-      id: "shop",
-      title: "Sklepy internetowe",
-      description: "Sklepy i systemy rezerwacji z bramkami płatności, fakturami i panelem do zarządzania zamówieniami.",
-      file_name: "sklep.ts",
-      icon: "cart",
-      tags: ["Stripe", "Przelewy24", "Headless"],
-      price_from: 6000,
-    },
-    {
-      id: "api",
-      title: "API i backend",
-      description: "Wydajne API, bazy danych i integracje z zewnętrznymi systemami. Czysta architektura, testy i dokumentacja.",
-      file_name: "api.ts",
-      icon: "server",
-      tags: ["Node.js", "PostgreSQL", "REST"],
-      price_from: 5000,
-    },
-    {
-      id: "bots",
-      title: "Automatyzacje i boty",
-      description: "Boty Discord, skrypty i integracje, które robią nudną robotę za Ciebie — 24 godziny na dobę.",
-      file_name: "bot.py",
-      icon: "bot",
-      tags: ["Discord", "Integracje", "Cron"],
-      price_from: 1500,
-    },
-    {
-      id: "audit",
-      title: "Audyt i optymalizacja",
-      description: "Przyspieszę istniejącą stronę, poprawię Core Web Vitals i załatam luki bezpieczeństwa.",
-      file_name: "audyt.md",
-      icon: "gauge",
-      tags: ["Wydajność", "Security", "SEO"],
-      price_from: 1200,
-    },
-  ],
-  faq_section: {
-    hidden: false,
-    eyebrow: "02 — faq",
-    title: "Częste pytania",
-    subtitle: "Nie ma tu Twojego pytania? Napisz — odpowiadam w ciągu doby.",
-  },
-  faq: [
-    {
-      id: "q1",
-      question: "Ile trwa realizacja projektu?",
-      answer: "Prosta strona to zwykle 1–2 tygodnie, aplikacja webowa od 4 do 12 tygodni. Dokładny harmonogram dostajesz razem z wyceną, zanim zaczniemy.",
-    },
-    {
-      id: "q2",
-      question: "Jak wygląda współpraca krok po kroku?",
-      answer: "Krótka rozmowa → wycena i harmonogram → projekt → programowanie z podglądem na żywo → wdrożenie. Na każdym etapie widzisz postępy i możesz zgłaszać uwagi.",
-    },
-    {
-      id: "q3",
-      question: "Czy sam będę mógł edytować treści?",
-      answer: "Tak. Każdą stronę podpinam pod wygodny panel CMS, w którym zmienisz teksty, zdjęcia, ceny czy FAQ bez znajomości kodu.",
-    },
-    {
-      id: "q4",
-      question: "Jak wyglądają płatności?",
-      answer: "Zwykle 30% zaliczki na start i reszta po odbiorze. Przy większych projektach rozliczamy się etapami. Wystawiam fakturę VAT.",
-    },
-    {
-      id: "q5",
-      question: "Co po wdrożeniu?",
-      answer: "Dostajesz 30 dni gwarancji na poprawki. Potem mogę dalej opiekować się projektem w ramach miesięcznego abonamentu: aktualizacje, kopie zapasowe, monitoring.",
-    },
-    {
-      id: "q6",
-      question: "Czy kod będzie należał do mnie?",
-      answer: "Tak. Po opłaceniu projektu przekazuję pełne prawa do kodu i dostęp do repozytorium.",
-    },
-  ],
-  footer: {
-    cta_title: "Masz pomysł? Zbudujmy go.",
-    cta_subtitle: "Opisz projekt w kilku zdaniach — w ciągu 24 godzin wrócę z pytaniami albo wstępną wyceną.",
-    copyright: "© {rok} programista.dev. Wszystkie prawa zastrzeżone.",
-  },
-  social_links: [
-    { id: "gh", platform: "github", url: "https://github.com" },
-    { id: "li", platform: "linkedin", url: "https://www.linkedin.com" },
-    { id: "x", platform: "x", url: "https://x.com" },
-  ],
+  hero_stats: [],
+  services_section: header,
+  services: [],
+  faq_section: header,
+  faq: [],
+  footer: { cta_title: "", cta_subtitle: "", copyright: "" },
+  social_links: [],
 };
+
+/**
+ * Treści awaryjne (gdy API CMS-a nie odpowiada) — ta sama treść, którą skrypt
+ * `npm run cms:schema` wysyła do panelu jako `defaults`. Jedno źródło: cms/defaults.json.
+ */
+export const fallbackContent: SiteContent = normalizeContent(defaults, EMPTY);

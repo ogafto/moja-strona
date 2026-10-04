@@ -4,131 +4,378 @@
       "key": "settings",
       "name": "Ustawienia ogólne",
       "kind": "single",
+      "hint": "Logo w menu i stopce, kolor przycisków, e-mail kontaktowy",
       "fields": [
-        { "key": "site_name", "label": "Nazwa / logo", "type": "text", "help": "Tekst logo w menu i stopce, np. jan.dev" },
-        { "key": "accent_color", "label": "Kolor akcentu", "type": "color", "help": "Główny kolor strony (przyciski, podświetlenia). Najlepiej jasny, np. #B6FF3B" },
-        { "key": "email", "label": "E-mail kontaktowy", "type": "text", "help": "Na ten adres klienci będą pisać z przycisków na stronie" }
+        {
+          "key": "site_name",
+          "label": "Nazwa / logo",
+          "type": "text",
+          "help": "Tekst logo w menu i stopce, np. jan.dev"
+        },
+        {
+          "key": "accent_color",
+          "label": "Kolor akcentu",
+          "type": "color",
+          "help": "Główny kolor strony (przyciski, podświetlenia). Najlepiej jasny, np. #B6FF3B"
+        },
+        {
+          "key": "email",
+          "label": "E-mail kontaktowy",
+          "type": "text",
+          "help": "Na ten adres klienci będą pisać z przycisków na stronie"
+        }
       ]
     },
     {
       "key": "seo",
       "name": "SEO (Google)",
       "kind": "single",
+      "hint": "Tytuł i opis widoczne w Google i przy udostępnianiu linku",
       "fields": [
-        { "key": "title", "label": "Tytuł strony", "type": "text", "help": "Widoczny w Google i na karcie przeglądarki. Do ok. 60 znaków" },
-        { "key": "description", "label": "Opis strony", "type": "textarea", "help": "Krótki opis w wynikach Google. Do ok. 160 znaków" },
-        { "key": "og_image", "label": "Obrazek do udostępnień", "type": "image", "help": "Pokazuje się po wklejeniu linku na Facebooku, Discordzie itp. Najlepiej 1200×630 px" }
+        {
+          "key": "title",
+          "label": "Tytuł strony",
+          "type": "text",
+          "help": "Widoczny w Google i na karcie przeglądarki. Do ok. 60 znaków"
+        },
+        {
+          "key": "description",
+          "label": "Opis strony",
+          "type": "textarea",
+          "help": "Krótki opis w wynikach Google. Do ok. 160 znaków"
+        },
+        {
+          "key": "og_image",
+          "label": "Obrazek do udostępnień",
+          "type": "image",
+          "help": "Pokazuje się po wklejeniu linku na Facebooku, Discordzie itp. Najlepiej 1200×630 px"
+        }
       ]
     },
     {
       "key": "navbar",
       "name": "Menu górne",
       "kind": "single",
+      "hint": "Przycisk w prawym górnym rogu strony",
       "fields": [
-        { "key": "cta_label", "label": "Tekst przycisku", "type": "text", "help": "Przycisk po prawej stronie menu, np. Napisz do mnie" },
-        { "key": "cta_url", "label": "Link przycisku", "type": "url", "help": "Np. #kontakt albo mailto:ty@domena.pl" }
+        {
+          "key": "cta_label",
+          "label": "Tekst przycisku",
+          "type": "text",
+          "help": "Przycisk po prawej stronie menu, np. Napisz do mnie"
+        },
+        {
+          "key": "cta_url",
+          "label": "Link przycisku",
+          "type": "url",
+          "help": "Np. #kontakt albo mailto:ty@domena.pl"
+        }
       ]
     },
     {
       "key": "nav_links",
       "name": "Linki w menu",
       "kind": "list",
+      "hint": "Linki na środku górnego menu",
+      "item": "link",
       "fields": [
-        { "key": "label", "label": "Nazwa", "type": "text", "required": true, "help": "Np. Usługi" },
-        { "key": "href", "label": "Link", "type": "url", "required": true, "help": "Sekcje strony: #uslugi, #faq, #kontakt" }
+        {
+          "key": "label",
+          "label": "Nazwa",
+          "type": "text",
+          "required": true,
+          "help": "Np. Usługi"
+        },
+        {
+          "key": "href",
+          "label": "Link",
+          "type": "url",
+          "required": true,
+          "help": "Sekcje strony: #uslugi, #faq, #kontakt"
+        }
       ]
     },
     {
       "key": "hero",
       "name": "Baner główny",
       "kind": "single",
+      "hint": "Pierwszy ekran strony: duży nagłówek, przyciski i okienko terminala",
       "fields": [
-        { "key": "badge", "label": "Plakietka nad nagłówkiem", "type": "text", "help": "Np. Dostępny na nowe projekty" },
-        { "key": "available", "label": "Pokaż zieloną kropkę „dostępny”", "type": "toggle", "help": "Wyłącz, gdy nie przyjmujesz nowych zleceń" },
-        { "key": "title_lead", "label": "Nagłówek – początek", "type": "text", "help": "Stała część nagłówka, np. Piszę kod, który" },
-        { "key": "rotating_words", "label": "Zmieniające się słowa", "type": "textarea", "help": "Jedno słowo lub krótka fraza w każdej linii – będą się animować po kolei" },
-        { "key": "subtitle", "label": "Opis pod nagłówkiem", "type": "textarea" },
-        { "key": "primary_cta_label", "label": "Główny przycisk – tekst", "type": "text" },
-        { "key": "primary_cta_url", "label": "Główny przycisk – link", "type": "url", "help": "Np. #uslugi" },
-        { "key": "secondary_cta_label", "label": "Drugi przycisk – tekst", "type": "text" },
-        { "key": "secondary_cta_url", "label": "Drugi przycisk – link", "type": "url", "help": "Np. mailto:ty@domena.pl" },
-        { "key": "name", "label": "Imię i nazwisko", "type": "text", "help": "Pokazuje się w okienku terminala" },
-        { "key": "role", "label": "Stanowisko", "type": "text", "help": "Np. Full-stack developer" },
-        { "key": "location", "label": "Lokalizacja", "type": "text", "help": "Np. Warszawa · zdalnie" },
-        { "key": "stack", "label": "Technologie", "type": "textarea", "help": "Oddziel przecinkami, np. Next.js, React, Node.js" },
-        { "key": "avatar", "label": "Zdjęcie profilowe", "type": "image", "help": "Kwadratowe, pokazuje się w okienku terminala. Zostaw puste, aby ukryć" }
+        {
+          "key": "badge",
+          "label": "Plakietka nad nagłówkiem",
+          "type": "text",
+          "help": "Np. Dostępny na nowe projekty"
+        },
+        {
+          "key": "available",
+          "label": "Pokaż zieloną kropkę „dostępny”",
+          "type": "toggle",
+          "help": "Wyłącz, gdy nie przyjmujesz nowych zleceń"
+        },
+        {
+          "key": "title_lead",
+          "label": "Nagłówek – początek",
+          "type": "text",
+          "help": "Stała część nagłówka, np. Piszę kod, który"
+        },
+        {
+          "key": "rotating_words",
+          "label": "Zmieniające się słowa",
+          "type": "textarea",
+          "help": "Jedno słowo lub krótka fraza w każdej linii – będą się animować po kolei"
+        },
+        {
+          "key": "subtitle",
+          "label": "Opis pod nagłówkiem",
+          "type": "textarea"
+        },
+        {
+          "key": "primary_cta_label",
+          "label": "Główny przycisk – tekst",
+          "type": "text"
+        },
+        {
+          "key": "primary_cta_url",
+          "label": "Główny przycisk – link",
+          "type": "url",
+          "help": "Np. #uslugi"
+        },
+        {
+          "key": "secondary_cta_label",
+          "label": "Drugi przycisk – tekst",
+          "type": "text"
+        },
+        {
+          "key": "secondary_cta_url",
+          "label": "Drugi przycisk – link",
+          "type": "url",
+          "help": "Np. mailto:ty@domena.pl"
+        },
+        {
+          "key": "name",
+          "label": "Imię i nazwisko",
+          "type": "text",
+          "help": "Pokazuje się w okienku terminala"
+        },
+        {
+          "key": "role",
+          "label": "Stanowisko",
+          "type": "text",
+          "help": "Np. Full-stack developer"
+        },
+        {
+          "key": "location",
+          "label": "Lokalizacja",
+          "type": "text",
+          "help": "Np. Warszawa · zdalnie"
+        },
+        {
+          "key": "stack",
+          "label": "Technologie",
+          "type": "textarea",
+          "help": "Oddziel przecinkami, np. Next.js, React, Node.js"
+        },
+        {
+          "key": "avatar",
+          "label": "Zdjęcie profilowe",
+          "type": "image",
+          "help": "Kwadratowe, pokazuje się w okienku terminala. Zostaw puste, aby ukryć"
+        }
       ]
     },
     {
       "key": "hero_stats",
       "name": "Liczby w banerze",
       "kind": "list",
+      "hint": "Cztery liczby pod przyciskami w banerze głównym",
+      "item": "liczbę",
       "fields": [
-        { "key": "value", "label": "Wartość", "type": "text", "required": true, "help": "Np. 8+ albo 120+" },
-        { "key": "label", "label": "Opis", "type": "text", "required": true, "help": "Np. lat doświadczenia" }
+        {
+          "key": "value",
+          "label": "Wartość",
+          "type": "text",
+          "required": true,
+          "help": "Np. 8+ albo 120+"
+        },
+        {
+          "key": "label",
+          "label": "Opis",
+          "type": "text",
+          "required": true,
+          "help": "Np. lat doświadczenia"
+        }
       ]
     },
     {
       "key": "services_section",
       "name": "Usługi – nagłówek sekcji",
       "kind": "single",
+      "hint": "Tytuł i opis nad kartami usług",
       "fields": [
-        { "key": "hidden", "label": "Ukryj sekcję", "type": "toggle", "help": "Włącz, żeby schować całą sekcję usług" },
-        { "key": "eyebrow", "label": "Mały napis nad tytułem", "type": "text" },
-        { "key": "title", "label": "Tytuł", "type": "text" },
-        { "key": "subtitle", "label": "Opis", "type": "textarea" }
+        {
+          "key": "hidden",
+          "label": "Ukryj sekcję",
+          "type": "toggle",
+          "help": "Włącz, żeby schować całą sekcję usług"
+        },
+        {
+          "key": "eyebrow",
+          "label": "Mały napis nad tytułem",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Tytuł",
+          "type": "text"
+        },
+        {
+          "key": "subtitle",
+          "label": "Opis",
+          "type": "textarea"
+        }
       ]
     },
     {
       "key": "services",
       "name": "Usługi (co wykonuję)",
       "kind": "list",
+      "hint": "Karty usług w sekcji „Co wykonuję”",
+      "item": "usługę",
       "fields": [
-        { "key": "title", "label": "Nazwa usługi", "type": "text", "required": true },
-        { "key": "description", "label": "Opis", "type": "textarea", "required": true },
-        { "key": "file_name", "label": "Nazwa „pliku” na karcie", "type": "text", "help": "Ozdobny napis w nagłówku karty, np. sklep.tsx" },
-        { "key": "icon", "label": "Ikona", "type": "text", "help": "Jedna z: globe, layout, cart, server, bot, gauge, smartphone, database, shield, code, palette, cloud" },
-        { "key": "tags", "label": "Tagi", "type": "text", "help": "Oddziel przecinkami, np. Next.js, SEO, CMS" },
-        { "key": "price_from", "label": "Cena od (zł)", "type": "number", "help": "Sama liczba w złotych. Zostaw puste lub 0, aby ukryć cenę" }
+        {
+          "key": "title",
+          "label": "Nazwa usługi",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "description",
+          "label": "Opis",
+          "type": "textarea",
+          "required": true
+        },
+        {
+          "key": "file_name",
+          "label": "Nazwa „pliku” na karcie",
+          "type": "text",
+          "help": "Ozdobny napis w nagłówku karty, np. sklep.tsx"
+        },
+        {
+          "key": "icon",
+          "label": "Ikona",
+          "type": "text",
+          "help": "Jedna z: globe, layout, cart, server, bot, gauge, smartphone, database, shield, code, palette, cloud"
+        },
+        {
+          "key": "tags",
+          "label": "Tagi",
+          "type": "text",
+          "help": "Oddziel przecinkami, np. Next.js, SEO, CMS"
+        },
+        {
+          "key": "price_from",
+          "label": "Cena od (zł)",
+          "type": "number",
+          "help": "Sama liczba w złotych. Zostaw puste lub 0, aby ukryć cenę"
+        }
       ]
     },
     {
       "key": "faq_section",
       "name": "FAQ – nagłówek sekcji",
       "kind": "single",
+      "hint": "Tytuł i opis po lewej stronie sekcji FAQ",
       "fields": [
-        { "key": "hidden", "label": "Ukryj sekcję", "type": "toggle", "help": "Włącz, żeby schować całą sekcję FAQ" },
-        { "key": "eyebrow", "label": "Mały napis nad tytułem", "type": "text" },
-        { "key": "title", "label": "Tytuł", "type": "text" },
-        { "key": "subtitle", "label": "Opis", "type": "textarea" }
+        {
+          "key": "hidden",
+          "label": "Ukryj sekcję",
+          "type": "toggle",
+          "help": "Włącz, żeby schować całą sekcję FAQ"
+        },
+        {
+          "key": "eyebrow",
+          "label": "Mały napis nad tytułem",
+          "type": "text"
+        },
+        {
+          "key": "title",
+          "label": "Tytuł",
+          "type": "text"
+        },
+        {
+          "key": "subtitle",
+          "label": "Opis",
+          "type": "textarea"
+        }
       ]
     },
     {
       "key": "faq",
       "name": "FAQ – pytania",
       "kind": "list",
+      "hint": "Rozwijane pytania w sekcji FAQ",
+      "item": "pytanie",
       "fields": [
-        { "key": "question", "label": "Pytanie", "type": "text", "required": true },
-        { "key": "answer", "label": "Odpowiedź", "type": "textarea", "required": true }
+        {
+          "key": "question",
+          "label": "Pytanie",
+          "type": "text",
+          "required": true
+        },
+        {
+          "key": "answer",
+          "label": "Odpowiedź",
+          "type": "textarea",
+          "required": true
+        }
       ]
     },
     {
       "key": "footer",
       "name": "Stopka i kontakt",
       "kind": "single",
+      "hint": "Duży napis kontaktowy i prawa autorskie na dole strony",
       "fields": [
-        { "key": "cta_title", "label": "Duży napis w stopce", "type": "text", "help": "Np. Masz pomysł? Zbudujmy go." },
-        { "key": "cta_subtitle", "label": "Tekst pod napisem", "type": "textarea" },
-        { "key": "copyright", "label": "Prawa autorskie", "type": "text", "help": "Wpisz {rok}, a wstawi się bieżący rok" }
+        {
+          "key": "cta_title",
+          "label": "Duży napis w stopce",
+          "type": "text",
+          "help": "Np. Masz pomysł? Zbudujmy go."
+        },
+        {
+          "key": "cta_subtitle",
+          "label": "Tekst pod napisem",
+          "type": "textarea"
+        },
+        {
+          "key": "copyright",
+          "label": "Prawa autorskie",
+          "type": "text",
+          "help": "Wpisz {rok}, a wstawi się bieżący rok"
+        }
       ]
     },
     {
       "key": "social_links",
       "name": "Social media",
       "kind": "list",
+      "hint": "Ikonki social mediów w stopce",
+      "item": "link",
       "fields": [
-        { "key": "platform", "label": "Serwis", "type": "text", "required": true, "help": "Jeden z: github, linkedin, x, instagram, youtube, discord, facebook, tiktok, dribbble" },
-        { "key": "url", "label": "Link do profilu", "type": "url", "required": true }
+        {
+          "key": "platform",
+          "label": "Serwis",
+          "type": "text",
+          "required": true,
+          "help": "Jeden z: github, linkedin, x, instagram, youtube, discord, facebook, tiktok, dribbble"
+        },
+        {
+          "key": "url",
+          "label": "Link do profilu",
+          "type": "url",
+          "required": true
+        }
       ]
     }
   ]

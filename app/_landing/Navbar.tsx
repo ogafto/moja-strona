@@ -76,13 +76,13 @@ export default function Navbar({ siteName, links, ctaLabel, ctaUrl }: Props) {
         </ul>
 
         <div className="flex items-center gap-2">
-          <a
+          {ctaLabel && ctaUrl && <a
             href={ctaUrl}
             className="group hidden items-center gap-1.5 rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-bg transition-transform hover:-translate-y-0.5 sm:flex"
           >
             {ctaLabel}
             <ArrowUpRight className="size-4 transition-transform group-hover:rotate-45" />
-          </a>
+          </a>}
           <button
             type="button"
             onClick={() => setOpen((v) => !v)}
@@ -117,13 +117,13 @@ export default function Navbar({ siteName, links, ctaLabel, ctaUrl }: Props) {
                 {l.label}
               </a>
             ))}
-            <a
+            {ctaLabel && ctaUrl && <a
               href={ctaUrl}
               onClick={() => setOpen(false)}
               className="mt-2 flex items-center justify-center gap-2 rounded-xl bg-accent px-4 py-3 font-semibold text-bg"
             >
               {ctaLabel} <ArrowUpRight className="size-4" />
-            </a>
+            </a>}
           </motion.div>
         )}
       </AnimatePresence>

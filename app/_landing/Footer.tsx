@@ -66,7 +66,7 @@ export default function Footer({ footer, email, siteName, socials }: Props) {
             {head}
             <span className="font-serif font-normal italic text-accent">{tail}</span>
           </h2>
-          <p className="mt-6 max-w-xl leading-relaxed text-muted">{footer.cta_subtitle}</p>
+          {footer.cta_subtitle && <p className="mt-6 max-w-xl leading-relaxed text-muted">{footer.cta_subtitle}</p>}
 
           <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
             <a

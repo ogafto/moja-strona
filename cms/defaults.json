@@ -1,0 +1,139 @@
+{
+  "settings": {
+    "site_name": "programista.dev",
+    "accent_color": "#B6FF3B",
+    "email": "kontakt@programista.dev"
+  },
+  "seo": {
+    "title": "Programista — strony, aplikacje i automatyzacje na zamówienie",
+    "description": "Projektuję i programuję szybkie strony, aplikacje webowe, sklepy i integracje. Next.js, React, Node.js. Od pomysłu do wdrożenia."
+  },
+  "navbar": {
+    "cta_label": "Napisz do mnie",
+    "cta_url": "#kontakt"
+  },
+  "nav_links": [
+    { "label": "Usługi", "href": "#uslugi" },
+    { "label": "FAQ", "href": "#faq" },
+    { "label": "Kontakt", "href": "#kontakt" }
+  ],
+  "hero": {
+    "badge": "Dostępny na nowe projekty",
+    "available": true,
+    "title_lead": "Piszę kod, który",
+    "rotating_words": "sprzedaje.\nskaluje się.\nnie śpi.\npo prostu działa.",
+    "subtitle": "Strony, aplikacje webowe i automatyzacje, które są szybkie, bezpieczne i łatwe w utrzymaniu. Zajmuję się wszystkim — od makiety po wdrożenie na produkcję.",
+    "primary_cta_label": "Zobacz, co robię",
+    "primary_cta_url": "#uslugi",
+    "secondary_cta_label": "Wyceń projekt",
+    "secondary_cta_url": "#kontakt",
+    "name": "Jan Kowalski",
+    "role": "Full-stack developer",
+    "location": "Polska · zdalnie",
+    "stack": "Next.js, React, TypeScript, Node.js, PostgreSQL, Docker"
+  },
+  "hero_stats": [
+    { "value": "8+", "label": "lat doświadczenia" },
+    { "value": "120+", "label": "wdrożonych projektów" },
+    { "value": "99.9%", "label": "uptime aplikacji" },
+    { "value": "<24h", "label": "czas odpowiedzi" }
+  ],
+  "services_section": {
+    "hidden": false,
+    "eyebrow": "01 — usługi",
+    "title": "Co wykonuję",
+    "subtitle": "Biorę projekt od A do Z albo dołączam do Twojego zespołu tam, gdzie brakuje rąk. Każda usługa kończy się działającym kodem na produkcji."
+  },
+  "services": [
+    {
+      "title": "Strony internetowe",
+      "description": "Szybkie, responsywne strony firmowe i landing page z CMS-em, które ładują się w ułamku sekundy i dobrze wypadają w Google.",
+      "file_name": "landing.tsx",
+      "icon": "globe",
+      "tags": "Next.js, SEO, CMS",
+      "price_from": 2500
+    },
+    {
+      "title": "Aplikacje webowe",
+      "description": "Panele, systemy SaaS i narzędzia wewnętrzne — z logowaniem, rolami, płatnościami i wszystkim, czego potrzebuje Twój biznes.",
+      "file_name": "app.tsx",
+      "icon": "layout",
+      "tags": "React, TypeScript, Auth",
+      "price_from": 9000
+    },
+    {
+      "title": "Sklepy internetowe",
+      "description": "Sklepy i systemy rezerwacji z bramkami płatności, fakturami i panelem do zarządzania zamówieniami.",
+      "file_name": "sklep.ts",
+      "icon": "cart",
+      "tags": "Stripe, Przelewy24, Headless",
+      "price_from": 6000
+    },
+    {
+      "title": "API i backend",
+      "description": "Wydajne API, bazy danych i integracje z zewnętrznymi systemami. Czysta architektura, testy i dokumentacja.",
+      "file_name": "api.ts",
+      "icon": "server",
+      "tags": "Node.js, PostgreSQL, REST",
+      "price_from": 5000
+    },
+    {
+      "title": "Automatyzacje i boty",
+      "description": "Boty Discord, skrypty i integracje, które robią nudną robotę za Ciebie — 24 godziny na dobę.",
+      "file_name": "bot.py",
+      "icon": "bot",
+      "tags": "Discord, Integracje, Cron",
+      "price_from": 1500
+    },
+    {
+      "title": "Audyt i optymalizacja",
+      "description": "Przyspieszę istniejącą stronę, poprawię Core Web Vitals i załatam luki bezpieczeństwa.",
+      "file_name": "audyt.md",
+      "icon": "gauge",
+      "tags": "Wydajność, Security, SEO",
+      "price_from": 1200
+    }
+  ],
+  "faq_section": {
+    "hidden": false,
+    "eyebrow": "02 — faq",
+    "title": "Częste pytania",
+    "subtitle": "Nie ma tu Twojego pytania? Napisz — odpowiadam w ciągu doby."
+  },
+  "faq": [
+    {
+      "question": "Ile trwa realizacja projektu?",
+      "answer": "Prosta strona to zwykle 1–2 tygodnie, aplikacja webowa od 4 do 12 tygodni. Dokładny harmonogram dostajesz razem z wyceną, zanim zaczniemy."
+    },
+    {
+      "question": "Jak wygląda współpraca krok po kroku?",
+      "answer": "Krótka rozmowa → wycena i harmonogram → projekt → programowanie z podglądem na żywo → wdrożenie. Na każdym etapie widzisz postępy i możesz zgłaszać uwagi."
+    },
+    {
+      "question": "Czy sam będę mógł edytować treści?",
+      "answer": "Tak. Każdą stronę podpinam pod wygodny panel CMS, w którym zmienisz teksty, zdjęcia, ceny czy FAQ bez znajomości kodu."
+    },
+    {
+      "question": "Jak wyglądają płatności?",
+      "answer": "Zwykle 30% zaliczki na start i reszta po odbiorze. Przy większych projektach rozliczamy się etapami. Wystawiam fakturę VAT."
+    },
+    {
+      "question": "Co po wdrożeniu?",
+      "answer": "Dostajesz 30 dni gwarancji na poprawki. Potem mogę dalej opiekować się projektem w ramach miesięcznego abonamentu: aktualizacje, kopie zapasowe, monitoring."
+    },
+    {
+      "question": "Czy kod będzie należał do mnie?",
+      "answer": "Tak. Po opłaceniu projektu przekazuję pełne prawa do kodu i dostęp do repozytorium."
+    }
+  ],
+  "footer": {
+    "cta_title": "Masz pomysł? Zbudujmy go.",
+    "cta_subtitle": "Opisz projekt w kilku zdaniach — w ciągu 24 godzin wrócę z pytaniami albo wstępną wyceną.",
+    "copyright": "© {rok} programista.dev. Wszystkie prawa zastrzeżone."
+  },
+  "social_links": [
+    { "platform": "github", "url": "https://github.com" },
+    { "platform": "linkedin", "url": "https://www.linkedin.com" },
+    { "platform": "x", "url": "https://x.com" }
+  ]
+}

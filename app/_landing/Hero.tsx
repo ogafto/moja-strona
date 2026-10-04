@@ -25,7 +25,7 @@ export default function Hero({ hero, stats }: { hero: Hero; stats: Stat[] }) {
 
       <div className="relative mx-auto grid w-full max-w-6xl items-center gap-14 px-4 lg:grid-cols-[1.15fr_0.85fr]">
         <motion.div initial="hidden" animate="show" variants={{ show: { transition: { staggerChildren: 0.12 } } }}>
-          <motion.div
+          {hero.badge && <motion.div
             variants={fadeUp}
             className="inline-flex items-center gap-2.5 rounded-full border border-line bg-bg/60 py-1.5 pl-2.5 pr-4 font-mono text-xs text-muted backdrop-blur"
           >
@@ -34,7 +34,7 @@ export default function Hero({ hero, stats }: { hero: Hero; stats: Stat[] }) {
               <span className={`relative size-2 rounded-full ${hero.available ? "bg-accent" : "bg-muted"}`} />
             </span>
             {hero.badge}
-          </motion.div>
+          </motion.div>}
 
           <motion.h1 variants={fadeUp} className="mt-7 text-[clamp(2.6rem,7vw,5.4rem)] font-semibold leading-[0.98] tracking-[-0.04em] text-fg">
             <ScrambleText text={hero.title_lead} />
@@ -42,26 +42,26 @@ export default function Hero({ hero, stats }: { hero: Hero; stats: Stat[] }) {
             <RotatingWord words={hero.rotating_words} />
           </motion.h1>
 
-          <motion.p variants={fadeUp} className="mt-7 max-w-xl text-base leading-relaxed text-muted md:text-lg">
+          {hero.subtitle && <motion.p variants={fadeUp} className="mt-7 max-w-xl text-base leading-relaxed text-muted md:text-lg">
             {hero.subtitle}
-          </motion.p>
+          </motion.p>}
 
           <motion.div variants={fadeUp} className="mt-10 flex flex-col gap-3 sm:flex-row">
-            <a
+            {hero.primary_cta_label && hero.primary_cta_url && <a
               href={hero.primary_cta_url}
               className="group relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-xl bg-accent px-6 py-3.5 font-semibold text-bg transition-transform hover:-translate-y-0.5"
             >
               <span className="absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
               {hero.primary_cta_label}
               <ArrowDown className="size-4 transition-transform group-hover:translate-y-0.5" />
-            </a>
-            <a
+            </a>}
+            {hero.secondary_cta_label && hero.secondary_cta_url && <a
               href={hero.secondary_cta_url}
               className="group inline-flex items-center justify-center gap-2 rounded-xl border border-line bg-white/[0.03] px-6 py-3.5 font-medium text-fg backdrop-blur transition-colors hover:border-accent/50 hover:bg-white/[0.06]"
             >
               {hero.secondary_cta_label}
               <ArrowUpRight className="size-4 transition-transform group-hover:rotate-45" />
-            </a>
+            </a>}
           </motion.div>
 
           {stats.length > 0 && (
@@ -153,7 +153,7 @@ function Terminal({ hero }: { hero: Hero }) {
       cmd: "status --now",
       out: (
         <p className={hero.available ? "text-accent" : "text-muted"}>
-          {hero.available ? "●" : "○"} {hero.badge}
+          {hero.available ? "●" : "○"} {hero.badge || (hero.available ? "dostępny" : "brak wolnych terminów")}
         </p>
       ),
     },

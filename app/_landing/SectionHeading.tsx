@@ -18,10 +18,10 @@ export default function SectionHeading({ eyebrow, title, subtitle, className = "
       transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
       className={className}
     >
-      <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-accent">
+      {eyebrow && <p className="flex items-center gap-3 font-mono text-xs uppercase tracking-[0.2em] text-accent">
         <span className="h-px w-8 bg-accent/60" />
         {eyebrow}
-      </p>
+      </p>}
       <h2 className="mt-5 text-4xl font-semibold leading-[1.02] tracking-[-0.035em] text-fg md:text-6xl">
         {head}
         <span className="font-serif font-normal italic tracking-[-0.01em]">{tail}</span>
